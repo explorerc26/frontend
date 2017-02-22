@@ -1,1 +1,489 @@
-index.html
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Overview</title>
+		<style>
+		body {
+		  font-family: Arial;
+		}
+		ul.tree li {
+		  list-style-type: none;
+		  position: relative;
+		}
+		ul.tree li ul {
+		  display: none;
+		}
+		ul.tree li.open > ul {
+		  display: block;
+		}
+		ul.tree li a {
+		  color: black;
+		  text-decoration: none;
+		}
+		ul.tree li a:before {
+		  height: 1em;
+		  padding: 0 .1em;
+		  font-size: .8em;
+		  display: block;
+		  position: absolute;
+		  left: -1.3em;
+		  top: .2em;
+		}
+		ul.tree li > a:not(:last-child):before {
+		  content: '+';
+		}
+		ul.tree li.open > a:not(:last-child):before {
+		  content: '-';
+		}
+		
+		</style>
+	</head>
+	<body>
+		<h1>Overview</h1>
+
+		
+		<ul class="tree">
+  <li><a href="#">Client</a>
+    <ul>
+      <li><a href="#">CSS</a>
+        <ul>
+           <li><a href="#">Layout engine</a>
+               <ul>
+                <li><a href="#">Gecko -  Firefox</a></li>
+                <li><a href="#">Blink – Google Chrome, Opera </a></li>
+                <li><a href="#">WebKit – iOS,Safari</a></li>  
+                <li><a href="#">EdgeHTML – Microsoft Edge</a></li>
+                <li><a href="#">Trident – Internet Explorer</a></li>
+              </ul>           
+           </li>
+           <li><a href="#">Responsiveness</a>
+               <ul>
+                <li><a href="#">Bootstrap</a></li>
+                <li><a href="#">Foundation</a></li>
+              </ul>
+           </li>
+        </ul>
+      </li>
+      <li><a href="#">Javascript</a>
+        <ul>
+          <li><a href="#">ECMAScript engines</a>
+             <ul>
+              <li><a href="#">SpiderMonkey - Firefox</a></li>
+			  <li><a href="#">V8 -  Chrome, Nodejs, Opera</a></li>
+			  <li><a href="#">JavaScriptCore - Safari</a></li>
+			  <li><a href="#">Chakra - Microsoft Edge</a></li>
+			  <li><a href="#">Chakra: - Internet Explorer</a></li>
+			  <li><a href="#">Nashorn - engine used in Oracle JDK since version 8</a></li>
+			</ul>
+          </li>
+          <li><a href="#">Frameworks</a>
+              <ul>
+                <li><a href="#">Angular2</a></li>
+                <li><a href="#">Backbone</a></li>
+                <li><a href="#">Responsive</a></li>
+                <li><a href="#">DojO</a></li>
+              </ul>  
+          </li>
+          <li><a href="#">util libraries</a>
+              <ul>
+                <li><a href="#">jQuery</a></li>
+                <li><a href="#">jQuery-UI</a></li>
+                <li><a href="#">Lo-Dash</a></li>
+                <li><a href="#">Underscore</a></li>
+                <li><a href="#">Lazy.js</a></li>  
+              </ul>  
+          </li>
+           <li><a href="#">Grid libraries</a>
+              <ul>
+                <li><a href="#">Handsontable, handsontable.com</a></li>
+                <li><a href="#">SlickGrid</a></li>
+                <li><a href="#">Clusterize.js</a></li>
+                <li><a href="#">ui-grid , ui-grid.info</a></li>
+                <li><a href="#">DataTables, datatables.net</a></li>  
+				<li><a href="#">ng-table, ng-table.com</a></li>
+                <li><a href="#">jqGrid</a></li>
+                <li><a href="#">BackGrid.js, backgridjs.com</a></li>
+                <li><a href="#">Recline.js</a></li>
+                <li><a href="#">ag-grid, ag-grid.com</a></li>  
+              </ul>  
+          </li>
+          <li><a href="#">Chart libraries</a>
+			<ul>
+                <li><a href="#">D3.js	</a></li>
+                <li><a href="#">ZoomCharts	</a></li>
+                <li><a href="#">Highcharts	</a></li>
+                <li><a href="#">ZingChart	</a></li>
+                <li><a href="#">FusionCharts	</a></li>  
+                <li><a href="#">VanCharts	</a></li>
+                <li><a href="#">Google Chart Tools	</a></li>
+                <li><a href="#">Protovis</a></li>
+			</ul>  
+          </li>
+
+		</ul>
+      </li>
+
+    </ul>
+  </li>
+
+    <li><a href="#">NodeJS</a>
+		<ul>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+		</ul>
+	</li>
+
+			
+			
+			
+<li><a href="#">Client-Server</a>
+    <ul>
+      <li><a href="#">Servlet</a>
+        <ul>
+          <li><a href="#">LDAP</a></li>
+          <li><a href="#">Sub-item 2</a></li>
+          <li><a href="#">Sub-item 3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Ajax</a>
+        <ul>
+          <li><a href="#">LDAP</a></li>
+          <li><a href="#">Sub-item 2</a></li>
+          <li><a href="#">Sub-item 3</a></li>
+        </ul>
+      </li>	    
+      <li><a href="#">Websocket</a>
+        <ul>
+          <li><a href="#">LDAP</a></li>
+          <li><a href="#">Sub-item 2</a></li>
+          <li><a href="#">Sub-item 3</a></li>
+        </ul>
+      </li>
+
+     <li><a href="#">HTTP2</a>
+        <ul>
+          <li><a href="#">HTTP/2 does not modify the application semantics of HTTP in any way.</a></li>
+          <li><a href="#">All the core concepts, such as HTTP methods, status codes, URIs, and header fields, remain in place. </a></li>
+          <li><a href="#">Instead, HTTP/2 modifies how the data is formatted (framed) and transported between the client and server, both of whom manage the entire process, and hides all the complexity from our applications within the new framing layer.</a></li>
+		<li><a href="#"> All existing applications can be delivered without modification.</a></li>
+		<li><a href="#">Sub-item 3</a></li>
+		<li><a href="#">Sub-item 3</a></li>
+		<li><a href="#">Sub-item 3</a></li>
+		<li><a href="#">Sub-item 3</a></li>
+		<li><a href="#">Sub-item 3</a></li>
+		
+        </ul>
+      </li>
+	    
+	    
+	    
+     <li><a href="#">SSE</a>
+        <ul>
+          <li><a href="#">Uses HTTP behind the scenes</a></li>
+          <li><a href="#">IE doesnot support natively</a></li>
+          <li><a href="#">uses text/event-stream in response code</a></li>
+	  <li><a href="#">Basically response contains keyword data followed by data you want to send and two new lines. data: My message\n\n</a></li>
+	  <li>It could be used in cases when data communicates in one way – from server to client. Here are couple of cases which SSE is very useful: real-time stock prices update; live score and sports events; server monitoring web applications.</li>
+	 </ul>
+      </li>
+	    
+    </ul>
+  </li>		
+			
+
+			
+			
+			
+			
+			
+
+  <li><a href="#">Server</a>
+    <ul>
+      <li><a href="#">MVC</a>
+        <ul>
+          <li><a href="#">Sub-item 1</a></li>
+          <li><a href="#">Sub-item 2</a></li>
+          <li><a href="#">Sub-item 3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Security</a>
+        <ul>
+          <li><a href="#">Sub-item 1</a></li>
+          <li><a href="#">Sub-item 2</a></li>
+          <li><a href="#">Sub-item 3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">MQ</a>
+        <ul>
+          <li><a href="#">Sub-item 1</a></li>
+          <li><a href="#">Sub-item 2</a></li>
+          <li><a href="#">Sub-item 3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">SOA</a>
+        <ul>
+          <li><a href="#">Sub-item 1</a></li>
+          <li><a href="#">Sub-item 2</a></li>
+          <li><a href="#">Sub-item 3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Item E</a>
+        <ul>
+          <li><a href="#">Sub-item 1</a></li>
+          <li><a href="#">Sub-item 2</a></li>
+          <li><a href="#">Sub-item 3</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+
+
+
+
+  <li><a href="#">Cloud</a>
+    <ul>
+      <li><a href="#">Spring Cloud</a>
+        <ul>
+          <li><a href="#">Spring Cloud Configuration  </a></li>
+          <li><a href="#">Cloud Bus</a></li>
+          <li><a href="#">Spring Cloud Netflix</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Netflix</a>
+        <ul>
+          <li><a href="#">Eureka  </a>
+            <ul>
+              <li><a href="#">Spring Cloud Configuration  </a></li>
+              <li><a href="#">Cloud Bus</a></li>
+              <li><a href="#">Spring Cloud Netflix</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Ribbon </a></li>
+          <li><a href="#">Feign</a></li> 
+          <li><a href="#">Hystrix</a></li>
+          <li><a href="#">Zuul</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Dockers</a>
+        <ul>
+          <li><a href="#">Sub-item 1</a></li>
+          <li><a href="#">Sub-item 2</a></li>
+          <li><a href="#">Sub-item 3</a></li>
+        </ul>
+      </li>
+ 
+       <li><a href="#">Micro Services</a>
+        <ul>
+          <li><a href="#">Microservice Builder</a></li>
+          <li><a href="#">Specifications and Mockups</a></li>  
+          <li><a href="#">Containers and Orchestration</a></li>
+          <li><a href="#">Serverless and FAAS Computing</a></li>
+          <li><a href="#">Public directory and marketplace</a></li>
+          <li><a href="#">API management and gateway</a></li>
+          <li><a href="#">Monitoring</a></li>
+       </ul>
+      </li>
+ 
+ 
+       <li><a href="#">AWS</a>
+        <ul>
+          <li><a href="#">Sub-item 1</a></li>
+          <li><a href="#">Sub-item 2</a></li>
+          <li><a href="#">Sub-item 3</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  
+  
+    <li><a href="#">Security</a>
+    <ul>
+      <li><a href="#">Directories</a>
+        <ul>
+          <li><a href="#">DAP protocol</a>
+		<ul>
+          		<li><a href="#">X.500 standard based systems Oracle</a></li>
+        	</ul>
+	  </li>
+          <li><a href="#">LDAP protocol</a>
+		<ul>
+          		<li><a href="#">OpenLDAP -  Michigan LDAP</a></li>
+         		<li><a href="#">Active Directory - Microsoft</a></li>
+         		<li><a href="#">Apache Directory Server</a></li>
+			<li><a href="#">Oracle Internet Directory</a></li>
+			<li><a href="#">Sun Java System Directory Server</a></li>
+			<li><a href="#">OpenDS: Open-source directory service in Java, backed by Sun Microsystems</a></li>
+			<li><a href="#">IBM Tivoli Directory Server</a></li>
+			<li><a href="#">Windows NT Directory Services (NTDS)</a></li>
+        	</ul>		  
+	  </li>
+        </ul>
+      </li>
+      <li><a href="#">Protocols</a>
+        <ul>
+          <li><a href="#">LDAP</a></li>
+          <li><a href="#">Sub-item 2</a></li>
+          <li><a href="#">Sub-item 3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">SSO</a>
+        <ul>
+          <li><a href="#">SAML - Autntication</a>
+		<ul>
+		  <li><a href="#">Active Directory Federation Services	Microsoft</a></li>
+		  <li><a href="#">Facebook connect	Facebook</a></li>
+		  <li><a href="#">IBM Enterprise Identity Mapping	IBM</a></li>
+		  <li><a href="#">LTPA	IBM</a></li>
+		  <li><a href="#">WSO2 Identity Server	WSO2</a></li>
+		  <li><a href="#">IBM Tivoli Access Manager	IBM</a></li>
+		  <li><a href="#">Oracle Identity Management	Oracle Corporation</a></li>
+		  <li><a href="#">myOneLogin	VMware</a></li>
+		  <li><a href="#">SAML	OASIS</a></li>
+		</ul>  
+	  </li>
+          <li><a href="#">OAUTH , Open ID- Authorization</a></li>
+          <li><a href="#">SCIM- Fedaration</a></li>
+  
+          <li><a href="#">Solutions/Suits</a>
+		<ul>
+		  <li><a href="#">auth0</a></li>
+		  <li><a href="#"></a></li>
+
+		</ul>  
+	  </li>
+	 </ul>
+      </li>
+    </ul>
+  </li>
+			
+			
+  <li><a href="#">Authentication</a>
+    <ul>
+      <li><a href="#">Two actor Authentication</a>
+        <ul>
+          <li><a href="#">rsa adaptive authentication </a></li>
+          <li><a href="#">Sub-item 2</a></li>
+          <li><a href="#">Sub-item 3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Time-based One-time Password Algorithm</a>
+        <ul>
+          <li><a href="#">Sub-item 1</a></li>
+          <li><a href="#">Sub-item 2</a></li>
+          <li><a href="#">Sub-item 3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">MQ</a>
+        <ul>
+          <li><a href="#">Sub-item 1</a></li>
+          <li><a href="#">Sub-item 2</a></li>
+          <li><a href="#">Sub-item 3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">TODO</a>
+        <ul>
+          <li><a href="#">Sub-item 1</a></li>
+          <li><a href="#">Sub-item 2</a></li>
+          <li><a href="#">Sub-item 3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">TODO</a>
+        <ul>
+          <li><a href="#">Sub-item 1</a></li>
+          <li><a href="#">Sub-item 2</a></li>
+          <li><a href="#">Sub-item 3</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+
+			
+				
+<li><a href="#">Tools</a>
+    <ul>
+      <li><a href="#">REST API Documentation</a>
+        <ul>
+          <li><a href="#">Documentation has moved from just being static and has started providing a live API experience</a></li>
+          <li><a href="#">Any product, if its capabilities are not clear for the consumers of the API, will find it hard to succeed</a></li>
+          <li><a href="#">Providing just an API with bunch of example requests and responses is hardly useful</a></li>
+	  <li><a href="#">should provide enough business context around the functionality that their API is useful for and the problems that clients can solve using the API</a></li>
+          <li><a href="#">REST is a style and not a standard</a></li>
+          <li><a href="#"> role-based access control (RBAC) - Details of which calls are allowed for which roles and how to obtain those roles is always helpful</a></li>
+          <li><a href="#">Softwares</a>
+		<ul>
+		  <li><a href="#">wadl</a>
+			<ul>
+			  <li><a href="#">Complex to understand</a></li>
+			  <li><a href="#">Lack of toolings</a></li>
+			</ul>			  
+		   </li>
+		  <li><a href="#">Swagger from SmartBear: new Open API Initiative (OAI) or OpenApi</a>
+
+			<ul>
+			  <li><a href="#">Swagger is a specification and complete framework implementation for describing, producing, consuming, and visualizing RESTful web services. Swagger is language agnostic</a></li>
+			  <li><a href="#">Swagger UI is a dependency-free collection of HTML, Javascript, and CSS assets that dynamically generate beautiful documentation from a Swagger-compliant API</a></li>
+			<li><a href="#">Swagger CodeGen is a template-driven engine to generate client code in different languages using your Swagger documentation</a></li>
+				<li><a href="#">The Swagger Ecosystem provides support for various tooling built both by external parties and the developers of the Swagger specification</a></li>
+				
+			  </ul>	
+		  </li>
+		  <li><a href="#">RAML RESTful API Modeling Language from MULESOFT</a>
+			
+			<ul>
+			  <li><a href="#">RAML is a language for the definition of HTTP-based APIs that embody most or all of the principles of Representational State Transfer (REST)</a></li>
+			  <li><a href="http://raml.org/projects/projects">RAML is also extremely popular and has a rich ecosystem of tooling built around RAML available - like to API Designer, API Workbench, RAML for JAX-RS etc </a></li>
+			</ul>
+			</li>
+
+			
+			<li><a href="#">API Blue Print from APIARY</a>
+			
+			<ul>
+			  <li><a href="#">API Blueprint is a documentation-oriented web API description language</a></li>
+			  <li><a href="#">LAck of toolings</a></li>
+			</ul>
+			</li>
+		</ul>  		  
+	  </li>	
+	 </ul>
+      </li>
+      <li><a href="#"></a>
+        <ul>
+          <li><a href="#">LDAP</a></li>
+          <li><a href="#">Sub-item 2</a></li>
+          <li><a href="#">Sub-item 3</a></li>
+        </ul>
+      </li>	    
+
+	    
+    </ul>
+  </li>		
+			
+			
+			
+			
+ </ul>
+		
+		
+		
+		<script>
+		var tree = document.querySelectorAll('ul.tree a:not(:last-child)');
+		for (var i = 0; i < tree.length; i++) {
+		    tree[i].addEventListener('click', function(e) {
+		        var parent = e.target.parentElement;
+		        var classList = parent.classList;
+		        if (classList.contains("open")) {
+		            classList.remove('open');
+		            var opensubs = parent.querySelectorAll(':scope .open');
+		            for (var i = 0; i < opensubs.length; i++) {
+		                opensubs[i].classList.remove('open');
+		            }
+		        } else {
+		            classList.add('open');
+		        }
+		    });
+		}		
+		</script>	
+	</body>
+</html>
