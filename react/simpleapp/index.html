@@ -1,0 +1,143 @@
+<html>
+
+<head>
+    <link href="css/bootstrap.css" rel="stylesheet">
+</head>
+
+<body>
+  
+    <div id='root'></div>
+
+
+    
+  
+
+    <script src="https://fb.me/react-15.0.1.js"></script>
+    <script src="https://fb.me/react-dom-15.0.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    
+    <!--
+    This is where you link to your React code. Can be .js or .jsx 
+    extension, doesn't really matter.
+    -->
+    <!-- below will work 
+    <script src="js/script.js" type="text/babel"></script>
+-->
+    
+    <!-- or like this -->
+    <script type="text/babel">
+
+        var Navigation = React.createClass({
+            render: function(){
+                return(
+                    
+            <nav className="navbar navbar-inverse navbar-fixed-top">
+                <div className="container">
+                    <div className="navbar-header">
+                        <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span className="sr-only">Toggle navigation</span>
+                        <span className="icon-bar"></span>
+                        <span className="icon-bar"></span>
+                        <span className="icon-bar"></span>
+                      </button>
+                        <a className="navbar-brand" href="#">Project name</a>
+                    </div>
+                    <div id="navbar" className="collapse navbar-collapse">
+                        <ul className="nav navbar-nav">
+                            <li className="active"><a href="#">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+                
+                )
+            }
+        });
+
+        var Jumbotron = React.createClass({
+            render:function(){
+                return (
+                    
+                <div className="jumbotron">
+                    <div className="container">
+                        <h2>{this.props.title}</h2>
+                        <p>details</p>
+                        <p><a className="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+                    </div>
+                </div>
+                
+                );
+            }
+        });
+
+        var Headings = React.createClass({
+            
+            render: function(){
+                return(
+                
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-4">
+                                <h2>Heading</h2>
+                                <p>para</p>
+                                <p><a className="btn btn-default" href="#" role="button">details &raquo;</a></p>
+                            </div>
+                            <div className="col-md-4">
+                                <h2>Heading</h2>
+                                <p>para</p>
+                                <p><a className="btn btn-default" href="#" role="button">details &raquo;</a></p>
+                            </div>
+                            <div className="col-md-4">
+                                <h2>Heading</h2>
+                                <p>para</p>
+                                <p><a className="btn btn-default" href="#" role="button">details &raquo;</a></p>
+                            </div>
+                        </div>
+                        <hr/>
+                    </div>
+                
+                )
+            }
+            
+        });
+        
+        
+
+        var Footer = React.createClass({ 
+            render:function(){
+                return (
+                    <div className="container">
+                        <footer>
+                            <p>&copy; 2016 Company, Inc.</p>
+                        </footer>
+                    </div>
+                )
+            }
+
+        });
+    
+        var Root = React.createClass({
+            render:function(){
+                return (
+                    <div>
+                        <Navigation/>
+                        <Jumbotron title="Hello, Universe"/>
+                        <Headings/>
+                        <Footer/>
+                    </div>
+                )
+            }
+        });
+
+
+      ReactDOM.render(
+        <Root/>,
+        document.getElementById('root')
+      );
+    </script>
+    
+</body>
+
+</html>
