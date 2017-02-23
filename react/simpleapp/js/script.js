@@ -44,6 +44,51 @@
             }
         });
 
+   const divStyleShow = {
+        visibility:'visible',
+   };  
+   const divStyleHide = {
+        visibility:'hidden',
+   };  
+        class Heading extends React.Component {
+            
+        constructor(props) {
+            super(props);
+            this.state = {isToggleOn: false};
+
+            // This binding is necessary to make `this` work in the callback
+            this.handleClick = this.handleClick.bind(this);
+          }
+
+       
+            
+        handleClick() {
+            this.setState(prevState => ({
+                isToggleOn: !prevState.isToggleOn
+            }));
+        }
+
+          render() {
+            return (
+                    <div className="col-md-4">
+                        <h2>{this.props.title}</h2>
+                        <p>{this.props.details}</p>
+                        <p><a className="btn btn-default" href="#" role="button" onClick={this.handleClick}> {this.state.isToggleOn ? 'SHOW' : 'HIDE'} &raquo;</a>
+                            <div style={this.state.isToggleOn ? divStyleShow : divStyleHide}>
+                                sample details
+                            </div>
+                    
+                        </p>
+                    </div>
+            );
+          }
+        }
+
+        Heading.defaultProps = {
+            title: 'Heading',
+            details:'default details'
+        };
+
         var Headings = React.createClass({
             
             render: function(){
@@ -51,21 +96,9 @@
                 
                     <div className="container">
                         <div className="row">
-                            <div className="col-md-4">
-                                <h2>Heading</h2>
-                                <p>para</p>
-                                <p><a className="btn btn-default" href="#" role="button">details &raquo;</a></p>
-                            </div>
-                            <div className="col-md-4">
-                                <h2>Heading</h2>
-                                <p>para</p>
-                                <p><a className="btn btn-default" href="#" role="button">details &raquo;</a></p>
-                            </div>
-                            <div className="col-md-4">
-                                <h2>Heading</h2>
-                                <p>para</p>
-                                <p><a className="btn btn-default" href="#" role="button">details &raquo;</a></p>
-                            </div>
+                            <Heading title="Heading1"/>
+                            <Heading title="Heading2"/>
+                            <Heading title="Heading3"/>
                         </div>
                         <hr/>
                     </div>
@@ -77,18 +110,22 @@
         
         
 
-        var Footer = React.createClass({ 
-            render:function(){
-                return (
-                    <div className="container">
-                        <footer>
-                            <p>&copy; 2016 Company, Inc.</p>
-                        </footer>
-                    </div>
-                )
-            }
 
-        });
+        class Footer extends React.Component {
+          render() {
+            return (
+                <div className="container">
+                    <footer>
+                        <p>&copy;{this.props.company}.</p>
+                    </footer>
+                </div>
+            );
+          }
+        }
+
+        Footer.defaultProps = {
+          company: 'Stranger no company'
+        };
     
         var Root = React.createClass({
             render:function(){
